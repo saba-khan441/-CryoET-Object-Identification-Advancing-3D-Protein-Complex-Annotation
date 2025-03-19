@@ -78,23 +78,31 @@ denoised.zarr/ → Contains tomographic data (without labels)
 ##### 🔬 Preprocessing Steps
 
 ✔️ Multi-slice extraction to enhance spatial features
+
 ✔️ Intensity normalization for uniform contrast
+
 ✔️ Noise reduction to improve detection accuracy
 
 ##### 🛠️ Post-processing Steps
 
 ✔️ k-d tree spatial structures for refining detection precision
+
 ✔️ Confidence thresholding to reduce false positives
+
 ✔️ Non-maximum suppression for better localization
 
 #### 📊 Results
 
 ✅ Achieved high recall and improved localization of protein complexes
+
 ✅ Effective detection of macromolecular structures in noisy Cryo-ET data
+
 ✅ Post-processing with k-d trees significantly enhanced spatial accuracy
+
 ![image](https://github.com/user-attachments/assets/f33fad58-7d2c-4a6f-9361-39bfa7ce309f)
 
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/e4d7eb32-bff0-4aca-b640-5c855e3b772b)
+
 
 
 #### 🚀 Future Work
