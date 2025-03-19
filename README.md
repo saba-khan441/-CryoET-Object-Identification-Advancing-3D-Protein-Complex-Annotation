@@ -26,6 +26,11 @@ The dataset consists of 3D tomograms with ground truth annotations, designed to 
 
 **Not scored:** beta-amylase (for reference but not included in evaluation)
 
+#### Dataset download
+click on link and download complete dataset
+
+https://www.kaggle.com/competitions/czii-cryo-et-object-identification/data
+
 #### 📁 Dataset Structure
 
 **Train Data (train/)**
@@ -49,12 +54,15 @@ denoised.zarr/ → Contains tomographic data (without labels)
 #### 🔽 Downloading and Archiving YOLO (Ultralytics) for Offline Use
 
 !pip download -d ./packages ultralytics
+
 !tar cfvz archive.tar.gz ./packages
 
 #### 🔧 Installing YOLO (Ultralytics) Offline
 
 !tar xfvz /kaggle/input/ultralytics-for-offline-install/archive.tar.gz
+
 !pip install --no-index --find-links=./packages ultralytics
+
 !rm -rf ./packages
 
 #### 📦 Installing Required Dependencies
@@ -62,7 +70,9 @@ denoised.zarr/ → Contains tomographic data (without labels)
 !cp -r '/kaggle/input/hengck-czii-cryo-et-01/wheel_file' '/kaggle/working/'
 
 #### install asciitree and zarr from local wheels
+
 !pip install /kaggle/working/wheel_file/asciitree-0.3.3/asciitree-0.3.3.whl
+
 !pip install --no-index --find-links=/kaggle/working/wheel_file zarr
 
 #### 🏗️ Model Details
@@ -77,29 +87,33 @@ denoised.zarr/ → Contains tomographic data (without labels)
 
 ##### 🔬 Preprocessing Steps
 
-✔️ Multi-slice extraction to enhance spatial features
+Multi-slice extraction to enhance spatial features
 
-✔️ Intensity normalization for uniform contrast
+Intensity normalization for uniform contrast
 
-✔️ Noise reduction to improve detection accuracy
+ Noise reduction to improve detection accuracy
 
 ##### 🛠️ Post-processing Steps
 
-✔️ k-d tree spatial structures for refining detection precision
+ k-d tree spatial structures for refining detection precision
 
-✔️ Confidence thresholding to reduce false positives
+ Confidence thresholding to reduce false positives
 
-✔️ Non-maximum suppression for better localization
+ Non-maximum suppression for better localization
 
 #### 📊 Results
 
-✅ Achieved high recall and improved localization of protein complexes
+Achieved high recall and improved localization of protein complexes
 
-✅ Effective detection of macromolecular structures in noisy Cryo-ET data
+Effective detection of macromolecular structures in noisy Cryo-ET data
 
-✅ Post-processing with k-d trees significantly enhanced spatial accuracy
+ Post-processing with k-d trees significantly enhanced spatial accuracy
+
+ ##### Submission format
 
 ![image](https://github.com/user-attachments/assets/f33fad58-7d2c-4a6f-9361-39bfa7ce309f)
+
+##### Kaggle Scores (private and public)
 
 ![image](https://github.com/user-attachments/assets/e4d7eb32-bff0-4aca-b640-5c855e3b772b)
 
@@ -108,8 +122,11 @@ denoised.zarr/ → Contains tomographic data (without labels)
 #### 🚀 Future Work
 
 🔹 Fine-tuning the model on real Cryo-ET datasets
+
 🔹 Hyperparameter optimization for improved detection performance
+
 🔹 Enhanced post-processing techniques for better spatial precision
+
 🔹 Integrating additional deep learning models for ensemble predictions
 
 
